@@ -10,15 +10,22 @@
 </head>
 <body>
     <div class="container">
+        <div>
+          <form action="/SearchUS_url/" method="post">
+            <label for="SearchUS">Имя: </label>
+            <input id="SearchUS" type="text" name="name_field" value="">
+            <input type="submit" value="Поиск">
+        </form>
+        </div>  
         <div class="row">
           <div class="col">
-            Имя
+            Имена
             {% for student in students %}
             <h2> {{ student.name }}</h2>
             {% endfor %}
           </div>
           <div class="col">
-            Телефон
+            Телефоны
             {% for student in students %}
             <h3>{{ student.phone }}</h3>
             {% endfor %}
